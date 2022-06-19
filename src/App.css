@@ -1,5 +1,15 @@
+.App-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+/*
+  Header
+*/
+
 .header {
-  padding: 0px 10px;
+  padding: 0px 15px;
   background-color: #4D94F5;
   color: white;
   display: flex;
@@ -18,4 +28,84 @@
   width: 20px;
   height: 20px;
   color: white;
+}
+
+/*
+  Book List
+*/
+
+.book-list-container {
+  flex: 1;
+  padding: 15px;
+  overflow-y: scroll;
+}
+
+.book-list-title {
+  font-size: 15pt;
+  font-weight: 600;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/*
+  Book Card
+*/
+
+.book-card-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card-img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-card-info {
+  height: auto;
+  background-color: white;
+  position: relative;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card-title {
+  font-size: 10pt;
+  font-weight: 600;
+}
+
+.book-card-text {
+  font-size: 10pt;
+  color: lightslategray;
+}
+
+/*
+  Empty Card
+*/
+.empty-card-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-card-icon {
+  width: 35px;
+  height: 35px;
 }
