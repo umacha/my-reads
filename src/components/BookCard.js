@@ -6,7 +6,7 @@ import { BooksOnShelves } from "../App";
 import noImage from "../assets/no-image.png";
 
 const BookCard = ({ book, onClick }) => {
-	const { itemList, setItemList } = useContext(BooksOnShelves);
+	const { itemList } = useContext(BooksOnShelves);
 
 	const image = useMemo(() => {
 		return book.imageLinks?.smallThumbnail || noImage;
@@ -63,13 +63,14 @@ const imageStyle = css(`
 
 const infoStyle = css(`
 	height: auto;
-	width: 100%;
+	width: calc(100% - 10px);
 	background-color: rgba(0, 0, 0, 0.8);
 	position: absolute;
 	padding: 5px;
 	display: flex;
 	flex-direction: column;
 	bottom: 0;
+	margin: 0;
 `);
 
 const titleStyle = css(`

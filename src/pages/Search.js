@@ -24,7 +24,6 @@ const Search = ({ onClickBook }) => {
 			.then((results) => {
 				if (Array.isArray(results)) setSearchedItemList(results);
 				else setSearchedItemList([]);
-				console.log("results: ", results);
 			})
 			.catch((e) => {
 				console.error(e);

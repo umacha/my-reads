@@ -16,7 +16,7 @@ const BookDetailModal = ({
 	onClickAdd,
 	onClickClose,
 }) => {
-	const { itemList, setItemList } = useContext(BooksOnShelves);
+	const { itemList } = useContext(BooksOnShelves);
 
 	const genre = useMemo(() => {
 		if (!book?.categories) return "";

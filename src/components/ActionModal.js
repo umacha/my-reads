@@ -12,7 +12,7 @@ const ActionModal = ({
 	onClickShelf,
 	book,
 }) => {
-	const { itemList, setItemList } = useContext(BooksOnShelves);
+	const { itemList } = useContext(BooksOnShelves);
 
 	const shelfName = useMemo(() => {
 		const myItem = itemList?.find(({ id }) => id === book?.id);
