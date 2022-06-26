@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { color } from "../utils/constant";
 import { useCallback, useContext, useMemo } from "react";
 import { BooksOnShelves } from "../App";
 import noImage from "../assets/no-image.png";
