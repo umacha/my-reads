@@ -1,4 +1,5 @@
-import "./App.css";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Main from "./pages/Main";
@@ -13,7 +14,7 @@ import { message, SHELF_LIST } from "./utils/constant";
 export const BooksOnShelves = React.createContext();
 export const BooksSearched = React.createContext();
 
-export default function App() {
+const App = () => {
 	const [showDetail, setShowDetail] = useState(false);
 	const [showConfirm, setShowConfirm] = useState(false);
 	const [showSelectShelf, setShowSelectShelf] = useState(false);
@@ -85,7 +86,6 @@ export default function App() {
 					copy[index].shelf = selectedShelf;
 				}
 			}
-			console.log("新しいコピー: ", copy);
 			setItemList(copy);
 			update(book, selectedShelf);
 		},
@@ -112,10 +112,10 @@ export default function App() {
 	);
 
 	return (
-		<>
+		<div style={{ height: 100 }}>
 			<BooksOnShelves.Provider value={valueOnShelves}>
 				<BooksSearched.Provider value={valueSearched}>
-					<div className="App-content">
+					<div css={containerStyle}>
 						<Routes>
 							<Route
 								exact
@@ -152,6 +152,12 @@ export default function App() {
 					/>
 				</BooksSearched.Provider>
 			</BooksOnShelves.Provider>
-		</>
+		</div>
 	);
-}
+};
+
+const containerStyle = css(`
+padding-top: 50px;
+`);
+
+export default App;

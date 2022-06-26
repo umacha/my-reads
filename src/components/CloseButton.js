@@ -1,6 +1,9 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+
 const CloseButton = ({ size, fill, onClick }) => {
 	return (
-		<button className="close-button" onClick={onClick}>
+		<button css={containerStyle} onClick={onClick}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				height={size}
@@ -13,5 +16,12 @@ const CloseButton = ({ size, fill, onClick }) => {
 		</button>
 	);
 };
+
+const containerStyle = css(`
+border: none;
+background-color: rgba(0, 0, 0, 0);
+padding: 0;
+cursor: pointer;
+`);
 
 export default CloseButton;
