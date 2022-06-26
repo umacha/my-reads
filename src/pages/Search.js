@@ -3,8 +3,8 @@ import { css } from "@emotion/react";
 import { useContext, useEffect, useMemo, useState } from "react";
 import { BooksSearched } from "../App";
 import { search } from "../BooksAPI";
-import SearchBar from "../components/SearchBar";
-import SearchList from "../components/SearchList";
+import SearchBar from "../components/molecules/SearchBar";
+import SearchList from "../components/organisms/SearchList";
 import { color } from "../utils/constant";
 
 const Search = ({ onClickBook }) => {

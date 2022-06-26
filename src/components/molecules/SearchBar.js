@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useCallback } from "react";
-import { color } from "../utils/constant";
-import SearchIcon from "./SearchIcon";
+import { color } from "../../utils/constant";
+import SearchIcon from "../atoms/SearchIcon";
 
 const SearchBar = ({ setSearchQuery }) => {
 	const onChange = useCallback(

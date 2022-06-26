@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useCallback } from "react";
-import { color } from "../utils/constant";
-import StarEmptyIcon from "./StarEmptyIcon";
-import StarFillIcon from "./StarFillIcon";
-import StarHalfIcon from "./StarHalfIcon";
+import { color } from "../../utils/constant";
+import StarEmptyIcon from "../atoms/StarEmptyIcon";
+import StarFillIcon from "../atoms/StarFillIcon";
+import StarHalfIcon from "../atoms/StarHalfIcon";
 
 const Rate = ({ rate, rateCount }) => {
 	const renderStarList = useCallback(() => {

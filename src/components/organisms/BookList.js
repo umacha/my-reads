@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import BookCard from "./BookCard";
+import BookCard from "../molecules/BookCard";
 import { Droppable, Draggable } from "react-beautiful-dnd";
-import { color } from "../utils/constant";
+import { color } from "../../utils/constant";
 
 const BookList = ({ shelf, handleClick }) => {
 	return (

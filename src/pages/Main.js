@@ -2,7 +2,7 @@ import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import { BooksOnShelves } from "../App";
 import { update } from "../BooksAPI";
-import BookListsContainer from "../components/BookListsContainer";
+import BookListsContainer from "../components/organisms/BookListsContainer";
 
 const Main = ({ onClickBookItem }) => {
 	const [want, setWant] = useState([]);

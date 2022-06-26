@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { color } from "../utils/constant";
+import { color } from "../../utils/constant";
 import BookList from "./BookList";
 
 const BookListsContainer = ({ shelfList, handleClick }) => {

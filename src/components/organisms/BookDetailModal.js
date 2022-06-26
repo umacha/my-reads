@@ -1,13 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import BookRemoveButton from "./BookRemoveButton";
-import CloseButton from "./CloseButton";
+import BookRemoveButton from "../atoms/BookRemoveButton";
+import CloseButton from "../atoms/CloseButton";
 import { useCallback, useContext, useMemo } from "react";
-import BookAddButton from "./BookAddButton";
-import { color } from "../utils/constant";
-import Rate from "./Rate";
-import { BooksOnShelves } from "../App";
-import BookMoveButton from "./BookMoveButton";
+import BookAddButton from "../atoms/BookAddButton";
+import { color } from "../../utils/constant";
+import Rate from "../molecules/Rate";
+import { BooksOnShelves } from "../../App";
+import BookMoveButton from "../atoms/BookMoveButton";
 
 const BookDetailModal = ({
 	visible,

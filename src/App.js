@@ -1,14 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/molecules/Header";
 import Main from "./pages/Main";
 import Search from "./pages/Search";
-import BookDetailModal from "./components/BookDetailModal";
+import BookDetailModal from "./components/organisms/BookDetailModal";
 import React, { useCallback, useEffect, useState } from "react";
-import ConfirmModal from "./components/ConfirmModal";
+import ConfirmModal from "./components/molecules/ConfirmModal";
 import { getAll, update } from "./BooksAPI";
-import ActionModal from "./components/ActionModal";
+import ActionModal from "./components/molecules/ActionModal";
 import { message, SHELF_LIST } from "./utils/constant";
 
 export const BooksOnShelves = React.createContext();

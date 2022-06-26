@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useCallback, useContext, useMemo } from "react";
-import { BooksOnShelves } from "../App";
-import noImage from "../assets/no-image.png";
+import { BooksOnShelves } from "../../App";
+import noImage from "../../assets/no-image.png";
 
 const BookCard = ({ book, onClick }) => {
 	const { itemList } = useContext(BooksOnShelves);

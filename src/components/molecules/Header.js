@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import { color } from "../utils/constant";
-import SearchIcon from "./SearchIcon";
+import { color } from "../../utils/constant";
+import SearchIcon from "../atoms/SearchIcon";
 
 const Header = () => {
 	return (

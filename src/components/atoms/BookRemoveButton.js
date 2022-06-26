@@ -1,16 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { color } from "../utils/constant";
+import { color } from "../../utils/constant";
 
-const OkButton = ({ onClick }) => {
+const BookRemoveButton = ({ onClick }) => {
 	return (
 		<button css={containerStyle} onClick={onClick}>
-			OK
+			Remove
 		</button>
 	);
 };
 
-const containerStyle = css(`
+const containerStyle = css`
 	width: 80px;
 	height: 30px;
 	border-radius: 10px;
@@ -20,6 +20,6 @@ const containerStyle = css(`
 	cursor: pointer;
 	font-size: 10pt;
 	font-weight: 600;
-`);
+`;
 
-export default OkButton;
+export default BookRemoveButton;

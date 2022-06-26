@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useCallback, useContext, useMemo } from "react";
-import { BooksOnShelves } from "../App";
-import { color } from "../utils/constant";
+import { BooksOnShelves } from "../../App";
+import { color } from "../../utils/constant";
 
 const ActionModal = ({
 	visible,

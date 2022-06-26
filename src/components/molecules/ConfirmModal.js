@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { color } from "../utils/constant";
-import CancelButton from "./CancelButton";
-import OkButton from "./OkButton";
+import { color } from "../../utils/constant";
+import CancelButton from "../atoms/CancelButton";
+import OkButton from "../atoms/OkButton";
 
 const ConfirmModal = ({ visible, message, onClickCancel, onClickOk }) => {
 	if (!visible) return null;
