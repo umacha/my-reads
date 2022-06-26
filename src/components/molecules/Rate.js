@@ -5,6 +5,7 @@ import { color } from "../../utils/constant";
 import StarEmptyIcon from "../atoms/StarEmptyIcon";
 import StarFillIcon from "../atoms/StarFillIcon";
 import StarHalfIcon from "../atoms/StarHalfIcon";
+import PropTypes from "prop-types";
 
 const Rate = ({ rate, rateCount }) => {
 	const renderStarList = useCallback(() => {
@@ -35,6 +36,11 @@ const Rate = ({ rate, rateCount }) => {
 			<span css={rateCountStyle}>{`(${rateCount})`}</span>
 		</div>
 	);
+};
+
+Rate.propTypes = {
+	rate: PropTypes.number.isRequired,
+	rateCount: PropTypes.number.isRequired,
 };
 
 const containerStyle = css({

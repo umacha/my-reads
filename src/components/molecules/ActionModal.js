@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { useCallback, useContext, useMemo } from "react";
 import { BooksOnShelves } from "../../App";
 import { color } from "../../utils/constant";
+import PropTypes from "prop-types";
 
 const ActionModal = ({
 	visible,
@@ -56,6 +57,18 @@ const ActionModal = ({
 			</div>
 		</div>
 	);
+};
+
+ActionModal.defaultProps = {
+	visible: false,
+	book: {},
+};
+
+ActionModal.propTypes = {
+	message: PropTypes.string.isRequired,
+	buttons: PropTypes.array.isRequired,
+	onClickCancel: PropTypes.func.isRequired,
+	onClickShelf: PropTypes.func.isRequired,
 };
 
 const modalStyle = css({

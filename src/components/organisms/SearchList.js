@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import BookCard from "../molecules/BookCard";
+import PropTypes from "prop-types";
 
 const SearchList = ({ searchResults, onClickBook }) => {
 	if (!searchResults || searchResults.length === 0) return null;
@@ -16,6 +17,11 @@ const SearchList = ({ searchResults, onClickBook }) => {
 				  ))}
 		</div>
 	);
+};
+
+SearchList.propTypes = {
+	searchResults: PropTypes.array.isRequired,
+	onClickBook: PropTypes.func.isRequired,
 };
 
 const containerStyle = css(`

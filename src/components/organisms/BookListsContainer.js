@@ -2,6 +2,7 @@
 import { css } from "@emotion/react";
 import { color } from "../../utils/constant";
 import BookList from "./BookList";
+import PropTypes from "prop-types";
 
 const BookListsContainer = ({ shelfList, handleClick }) => {
 	return (
@@ -11,6 +12,11 @@ const BookListsContainer = ({ shelfList, handleClick }) => {
 			))}
 		</div>
 	);
+};
+
+BookListsContainer.propTypes = {
+	shelfList: PropTypes.array.isRequired,
+	handleClick: PropTypes.func.isRequired,
 };
 
 const container = css({

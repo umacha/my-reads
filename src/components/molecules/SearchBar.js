@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { useCallback } from "react";
 import { color } from "../../utils/constant";
 import SearchIcon from "../atoms/SearchIcon";
+import PropTypes from "prop-types";
 
 const SearchBar = ({ setSearchQuery }) => {
 	const onChange = useCallback(
@@ -24,6 +25,10 @@ const SearchBar = ({ setSearchQuery }) => {
 			/>
 		</div>
 	);
+};
+
+SearchBar.propTypes = {
+	setSearchQuery: PropTypes.func.isRequired,
 };
 
 const containerStyle = css({

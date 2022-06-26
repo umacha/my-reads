@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { useCallback, useContext, useMemo } from "react";
 import { BooksOnShelves } from "../../App";
 import noImage from "../../assets/no-image.png";
+import PropTypes from "prop-types";
 
 const BookCard = ({ book, onClick }) => {
 	const { itemList } = useContext(BooksOnShelves);
@@ -38,6 +39,11 @@ const BookCard = ({ book, onClick }) => {
 			{isOnShelf() && <div css={overlayStyle} />}
 		</div>
 	);
+};
+
+BookCard.propTypes = {
+	book: PropTypes.object.isRequired,
+	onClick: PropTypes.func.isRequired,
 };
 
 const containerStyle = css(`

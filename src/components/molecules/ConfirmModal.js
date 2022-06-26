@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { color } from "../../utils/constant";
 import CancelButton from "../atoms/CancelButton";
 import OkButton from "../atoms/OkButton";
+import PropTypes from "prop-types";
 
 const ConfirmModal = ({ visible, message, onClickCancel, onClickOk }) => {
 	if (!visible) return null;
@@ -17,6 +18,13 @@ const ConfirmModal = ({ visible, message, onClickCancel, onClickOk }) => {
 			</div>
 		</div>
 	);
+};
+
+ConfirmModal.propTypes = {
+	visible: PropTypes.bool.isRequired,
+	message: PropTypes.string.isRequired,
+	onClickCancel: PropTypes.func.isRequired,
+	onClickOk: PropTypes.func.isRequired,
 };
 
 const containerStyle = css(`

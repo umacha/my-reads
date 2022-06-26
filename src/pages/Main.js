@@ -3,6 +3,7 @@ import { DragDropContext } from "react-beautiful-dnd";
 import { BooksOnShelves } from "../App";
 import { update } from "../BooksAPI";
 import BookListsContainer from "../components/organisms/BookListsContainer";
+import PropTypes from "prop-types";
 
 const Main = ({ onClickBookItem }) => {
 	const [want, setWant] = useState([]);
@@ -105,6 +106,10 @@ const Main = ({ onClickBookItem }) => {
 			<BookListsContainer shelfList={shelfList} handleClick={onClickBookItem} />
 		</DragDropContext>
 	);
+};
+
+Main.propTypes = {
+	onClickBookItem: PropTypes.func.isRequired,
 };
 
 export default Main;

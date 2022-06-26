@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import BookCard from "../molecules/BookCard";
 import { Droppable, Draggable } from "react-beautiful-dnd";
 import { color } from "../../utils/constant";
+import PropTypes from "prop-types";
 
 const BookList = ({ shelf, handleClick }) => {
 	return (
@@ -43,6 +44,11 @@ const BookList = ({ shelf, handleClick }) => {
 			)}
 		</Droppable>
 	);
+};
+
+BookList.propTypes = {
+	shelf: PropTypes.object.isRequired,
+	handleClick: PropTypes.func.isRequired,
 };
 
 const listStyle = css({

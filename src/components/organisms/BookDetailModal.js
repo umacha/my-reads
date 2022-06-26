@@ -8,6 +8,7 @@ import { color } from "../../utils/constant";
 import Rate from "../molecules/Rate";
 import { BooksOnShelves } from "../../App";
 import BookMoveButton from "../atoms/BookMoveButton";
+import PropTypes from "prop-types";
 
 const BookDetailModal = ({
 	visible,
@@ -120,6 +121,14 @@ const BookDetailModal = ({
 			</div>
 		</div>
 	);
+};
+
+BookDetailModal.propTypes = {
+	visible: PropTypes.bool.isRequired,
+	book: PropTypes.object.isRequired,
+	onClickRemove: PropTypes.func.isRequired,
+	onClickAdd: PropTypes.func.isRequired,
+	onClickClose: PropTypes.func.isRequired,
 };
 
 const containerStyle = css(`

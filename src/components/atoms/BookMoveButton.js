@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { color } from "../../utils/constant";
+import PropTypes from "prop-types";
 
 const BookMoveButton = ({ onClick }) => {
 	return (
@@ -8,6 +9,10 @@ const BookMoveButton = ({ onClick }) => {
 			Move
 		</button>
 	);
+};
+
+BookMoveButton.propTypes = {
+	onClick: PropTypes.func.isRequired,
 };
 
 const containerStyle = css`

@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import PropTypes from "prop-types";
+import { color } from "../../utils/constant";
 
 const CloseButton = ({ size, fill, onClick }) => {
 	return (
@@ -15,6 +17,15 @@ const CloseButton = ({ size, fill, onClick }) => {
 			</svg>
 		</button>
 	);
+};
+
+CloseButton.defaultProps = {
+	size: 48,
+	fill: color.lightGray,
+};
+
+CloseButton.propTypes = {
+	onClick: PropTypes.func.isRequired,
 };
 
 const containerStyle = css(`

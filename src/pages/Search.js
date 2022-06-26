@@ -6,6 +6,7 @@ import { search } from "../BooksAPI";
 import SearchBar from "../components/molecules/SearchBar";
 import SearchList from "../components/organisms/SearchList";
 import { color } from "../utils/constant";
+import PropTypes from "prop-types";
 
 const Search = ({ onClickBook }) => {
 	const [searchQuery, setSearchQuery] = useState("");
@@ -44,6 +45,10 @@ const Search = ({ onClickBook }) => {
 			<SearchList searchResults={searchedItemList} onClickBook={onClickBook} />
 		</div>
 	);
+};
+
+Search.propTypes = {
+	onClickBook: PropTypes.func.isRequired,
 };
 
 const containerStyle = css({

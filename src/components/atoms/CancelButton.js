@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { color } from "../../utils/constant";
+import PropTypes from "prop-types";
 
 const CancelButton = ({ onClick }) => {
 	return (
@@ -8,6 +9,10 @@ const CancelButton = ({ onClick }) => {
 			Cancel
 		</button>
 	);
+};
+
+CancelButton.propTypes = {
+	onClick: PropTypes.func.isRequired,
 };
 
 const containerStyle = css(`
